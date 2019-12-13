@@ -1,4 +1,5 @@
 package uf3;
+
 import java.io.IOException;
 import java.io.Writer;
 import java.security.InvalidKeyException;
@@ -65,11 +66,10 @@ public class ClientSMTP2 {
 					System.out.println("4 -" + client.getReplyString());
 					System.out.println("INTRODUEIX DESTINATARI: ");
 					String desti1 = scan.nextLine();
-					/*
-					 * System.out.println("INTRODUEIX ASSUMPTE: "); String asumpte =
-					 * scan.nextLine(); System.out.println("ESCRIU EL MISSATGE: "); String missatge
-					 * = scan.nextLine();
-					 */
+					System.out.println("INTRODUEIX ASSUMPTE: ");
+					String asumpte = scan.nextLine();
+					System.out.println("ESCRIU EL MISSATGE: ");
+					String missatge = scan.nextLine();
 
 					// Es crea la capçalera
 					SimpleSMTPHeader capcalera = new SimpleSMTPHeader(username, desti1, asumpte);
@@ -125,7 +125,7 @@ public class ClientSMTP2 {
 		} catch (IOException f) {
 			f.printStackTrace();
 		}
-		
+
 		scan.close();
 
 		System.out.println("Final de l'enviament");
