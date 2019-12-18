@@ -23,8 +23,8 @@ public class ClientSMTP2 {
 
 		// Dades d'usuari i del servidor
 		String server = "smtp.gmail.com";
-		String username = "marc.rojo@insbaixcamp.cat";
-		String contrasenya = "insbc4200";
+		String username = "";
+		String contrasenya = "";
 		int port = 587;
 
 		try {
